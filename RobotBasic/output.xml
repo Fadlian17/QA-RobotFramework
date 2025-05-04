@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-05-01T21:13:42.188863" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/home/fadli/Documents/Automation/robotexplore/test.robot">
+<test id="s1-t1" name="Open Google" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T21:13:42.343985" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T21:13:42.343717" elapsed="4.613299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-01T21:13:49.957950" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-01T21:13:46.957360" elapsed="3.001242"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T21:13:49.959943" elapsed="0.066712"/>
+</kw>
+<status status="PASS" start="2025-05-01T21:13:42.342787" elapsed="7.684374"/>
+</test>
+<status status="PASS" start="2025-05-01T21:13:42.190058" elapsed="7.838421"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
