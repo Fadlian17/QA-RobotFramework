@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-11-19T07:30:58.700283" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/home/fadli/Documents/Automation/robotexplore/RobotBasic/test.robot">
+<test id="s1-t1" name="Open Google" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:30:58.842765" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-19T07:30:58.842442" elapsed="0.986026"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-19T07:31:02.829466" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-19T07:30:59.828792" elapsed="3.001142"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:02.830906" elapsed="0.068911"/>
+</kw>
+<status status="PASS" start="2025-11-19T07:30:58.841292" elapsed="4.058920"/>
+</test>
+<test id="s1-t2" name="Check Google Title" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:02.901598" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-19T07:31:02.901247" elapsed="1.114643"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:04.021010" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-11-19T07:31:04.016234" elapsed="0.004940"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:04.021486" elapsed="0.057486"/>
+</kw>
+<status status="PASS" start="2025-11-19T07:31:02.900641" elapsed="1.178637"/>
+</test>
+<test id="s1-t3" name="Search Keyword on Google" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:04.080359" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-19T07:31:04.080065" elapsed="1.040849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:05.121695" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-19T07:31:05.121235" elapsed="0.175033"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:05.297054" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
+<msg time="2025-11-19T07:31:05.614808" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-11-19T07:31:05.614993" level="INFO">Releasing special key RETURN.</msg>
+<arg>name=q</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:05.296595" elapsed="1.661839"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-19T07:31:08.959388" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-19T07:31:06.958735" elapsed="2.001094"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:08.960778" elapsed="0.104844"/>
+</kw>
+<status status="PASS" start="2025-11-19T07:31:04.079602" elapsed="4.986394"/>
+</test>
+<test id="s1-t4" name="Verify Search Results" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:09.067250" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-19T07:31:09.066939" elapsed="1.054613"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:10.122155" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-19T07:31:10.121848" elapsed="0.183779"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-11-19T07:31:10.306449" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
+<msg time="2025-11-19T07:31:10.671757" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-11-19T07:31:10.671900" level="INFO">Releasing special key RETURN.</msg>
+<arg>name=q</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:10.305958" elapsed="0.378447"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>robotframework.org</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-19T07:31:10.684718" elapsed="0.823323"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-19T07:31:11.508350" elapsed="0.059002"/>
+</kw>
+<status status="PASS" start="2025-11-19T07:31:09.066402" elapsed="2.501228"/>
+</test>
+<status status="PASS" start="2025-11-19T07:30:58.701433" elapsed="12.866717"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="4" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
