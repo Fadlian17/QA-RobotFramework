@@ -1,446 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-11-23T14:56:54.310764" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="/home/fadli/Documents/Automation/robotexplore/RobotBasic/test.robot">
-<test id="s1-t1" name="Open Google" line="5">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:56:54.456632" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<arg>https://www.google.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:56:54.456368" elapsed="1.391678"/>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-11-26T09:44:07.180907" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Logout" source="/home/fadli/Documents/Automation/robotexplore/RobotMedium/login_logout.robot">
+<test id="s1-t1" name="Login Success And Access HomePage And Log Out" line="14">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-11-26T09:44:07.348161" elapsed="4.656783"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-23T14:56:58.848878" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-11-26T09:44:15.007128" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-23T14:56:55.848340" elapsed="3.000973"/>
+<status status="PASS" start="2025-11-26T09:44:12.006000" elapsed="3.001612"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:56:58.870989" level="INFO">Page title is 'Google'.</msg>
-<arg>Google</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-11-23T14:56:58.850238" elapsed="0.021352"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:56:58.902991" level="INFO">Current page contains element 'name=q'.</msg>
-<arg>name=q</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-11-23T14:56:58.872861" elapsed="0.030312"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-23T14:56:58.903542" elapsed="0.061070"/>
-</kw>
-<status status="PASS" start="2025-11-23T14:56:54.455288" elapsed="4.509766"/>
-</test>
-<test id="s1-t2" name="Check Google Title" line="12">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:56:58.966675" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<arg>https://www.google.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:56:58.966259" elapsed="1.290422"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:00.263150" level="INFO">Page title is 'Google'.</msg>
-<arg>Google</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-11-23T14:57:00.257182" elapsed="0.006205"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:00.527492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:00.527685" level="FAIL">Page should have contained text 'Google Search' but did not.</msg>
-<arg>Google Search</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2025-11-23T14:57:00.263880" elapsed="0.264382">Page should have contained text 'Google Search' but did not.</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:00.528551" elapsed="0.000066"/>
-</kw>
-<status status="FAIL" start="2025-11-23T14:56:58.965551" elapsed="1.563313">Page should have contained text 'Google Search' but did not.</status>
-</test>
-<test id="s1-t3" name="Search Keyword on Google" line="18">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:00.529798" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<arg>https://www.google.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:00.529558" elapsed="2.024354"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:02.554778" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<arg>name=q</arg>
-<arg>Robot Framework</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:15.013598" level="INFO">Typing text 'standard_user' into text field 'xpath=//android.widget.EditText[@content-desc="test-Username"]'</msg>
+<msg time="2025-11-26T09:44:15.977117" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Username"]</arg>
+<arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-23T14:57:02.554392" elapsed="0.118544"/>
+<status status="PASS" start="2025-11-26T09:44:15.008405" elapsed="0.968842"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:02.674019" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
-<msg time="2025-11-23T14:57:02.976563" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-11-23T14:57:02.977094" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=q</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:02.673334" elapsed="2.296249"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:10.473474" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:10.473738" level="FAIL">Text 'Robot Framework' did not appear in 5 seconds.</msg>
-<arg>Robot Framework</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-11-23T14:57:04.969985" elapsed="5.504188">Text 'Robot Framework' did not appear in 5 seconds.</status>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<arg>id=search</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:10.474576" elapsed="0.000077"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:10.474918" elapsed="0.000066"/>
-</kw>
-<status status="FAIL" start="2025-11-23T14:57:00.529139" elapsed="9.946183">Text 'Robot Framework' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t4" name="Verify Search Results" line="26">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:10.476739" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<arg>https://www.google.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:10.476396" elapsed="1.891937"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:12.369016" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<arg>name=q</arg>
-<arg>Robot Framework</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:15.979351" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//android.widget.EditText[@content-desc="test-Password"]'</msg>
+<msg time="2025-11-26T09:44:17.085554" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Password"]</arg>
+<arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-23T14:57:12.368705" elapsed="0.153445"/>
+<status status="PASS" start="2025-11-26T09:44:15.977550" elapsed="1.108300"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:12.522970" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
-<msg time="2025-11-23T14:57:12.854841" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-11-23T14:57:12.854948" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=q</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:12.522480" elapsed="0.341946"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:17.090209" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]'.</msg>
+<msg time="2025-11-26T09:44:17.724109" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:17.086558" elapsed="0.637945"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:18.188663" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:18.188902" level="FAIL">Text 'robotframework.org' did not appear in 5 seconds.</msg>
-<arg>robotframework.org</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-11-23T14:57:12.864827" elapsed="5.324316">Text 'robotframework.org' did not appear in 5 seconds.</status>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:19.105968" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView
+xpath criteria: //android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView</arg>
+<arg>20s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-26T09:44:17.725295" elapsed="1.380858"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>robotframework.org</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:18.189548" elapsed="0.000103"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:19.109127" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView'.</msg>
+<msg time="2025-11-26T09:44:19.310841" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:19.106658" elapsed="0.204476"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:18.189994" elapsed="0.000060"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-26T09:44:22.312676" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-26T09:44:19.311837" elapsed="3.001232"/>
 </kw>
-<status status="FAIL" start="2025-11-23T14:57:10.475777" elapsed="7.714576">Text 'robotframework.org' did not appear in 5 seconds.</status>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:22.317251" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="LOGOUT"]'.</msg>
+<msg time="2025-11-26T09:44:22.591920" level="INFO">xpath criteria: //android.widget.TextView[@text="LOGOUT"]</msg>
+<arg>xpath=//android.widget.TextView[@text="LOGOUT"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:22.313886" elapsed="0.278532"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-11-26T09:44:22.593330" elapsed="0.619490"/>
+</kw>
+<tag>positive</tag>
+<status status="PASS" start="2025-11-26T09:44:07.347291" elapsed="15.866607"/>
 </test>
-<test id="s1-t5" name="Search Image on Google Images" line="34">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:18.191559" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com/imghp'.</msg>
-<arg>https://www.google.com/imghp</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:18.191261" elapsed="1.287777"/>
+<test id="s1-t2" name="Login Failed with Wrong Credentials" line="27">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-11-26T09:44:23.216758" elapsed="4.682356"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:19.479944" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<arg>name=q</arg>
-<arg>Robot Framework</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:27.905969" level="INFO">Typing text 'wrong_user' into text field 'xpath=//android.widget.EditText[@content-desc="test-Username"]'</msg>
+<msg time="2025-11-26T09:44:30.522895" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Username"]</arg>
+<arg>wrong_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-23T14:57:19.479413" elapsed="0.138064"/>
+<status status="PASS" start="2025-11-26T09:44:27.900223" elapsed="2.623009"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:19.618429" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
-<msg time="2025-11-23T14:57:19.909802" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-11-23T14:57:19.909944" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=q</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:19.617884" elapsed="1.610880"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:26.692444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:26.692644" level="FAIL">Element '//img[contains(@class,'rg_i')][1]' did not appear in 5 seconds.</msg>
-<arg>//img[contains(@class,'rg_i')][1]</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="FAIL" start="2025-11-23T14:57:21.229118" elapsed="5.463682">Element '//img[contains(@class,'rg_i')][1]' did not appear in 5 seconds.</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:26.693094" elapsed="0.000068"/>
-</kw>
-<status status="FAIL" start="2025-11-23T14:57:18.190747" elapsed="8.502772">Element '//img[contains(@class,'rg_i')][1]' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t6" name="Open Wikipedia Indonesia" line="41">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:26.694968" level="INFO">Opening browser 'Chrome' to base url 'https://id.wikipedia.org'.</msg>
-<arg>https://id.wikipedia.org</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:26.694687" elapsed="0.947850"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:27.854430" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:27.854649" level="FAIL">Title should have been 'Wikipedia bahasa Indonesia' but was 'Wikipedia bahasa Indonesia, ensiklopedia bebas'.</msg>
-<arg>Wikipedia bahasa Indonesia</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2025-11-23T14:57:27.642989" elapsed="0.211970">Title should have been 'Wikipedia bahasa Indonesia' but was 'Wikipedia bahasa Indonesia, ensiklopedia bebas'.</status>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<arg>name=search</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:27.855212" elapsed="0.000047"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:27.855435" elapsed="0.000043"/>
-</kw>
-<status status="FAIL" start="2025-11-23T14:57:26.693928" elapsed="1.161773">Title should have been 'Wikipedia bahasa Indonesia' but was 'Wikipedia bahasa Indonesia, ensiklopedia bebas'.</status>
-</test>
-<test id="s1-t7" name="Search Article on Wikipedia" line="47">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:27.856711" level="INFO">Opening browser 'Chrome' to base url 'https://id.wikipedia.org'.</msg>
-<arg>https://id.wikipedia.org</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:27.856459" elapsed="3.756156"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:31.613682" level="INFO">Typing text 'Robot Framework' into text field 'name=search'.</msg>
-<msg time="2025-11-23T14:57:31.945106" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:31.945320" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=141.0.7390.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
-Stacktrace:
-#0 0x63d557f66fea &lt;unknown&gt;
-#1 0x63d5579e4b4e &lt;unknown&gt;
-#2 0x63d557a2d4ae &lt;unknown&gt;
-#3 0x63d557a5ce12 &lt;unknown&gt;
-#4 0x63d557a2aae7 &lt;unknown&gt;
-#5 0x63d557a5cfde &lt;unknown&gt;
-#6 0x63d557a82b3b &lt;unknown&gt;
-#7 0x63d557a5cbe3 &lt;unknown&gt;
-#8 0x63d557a292d2 &lt;unknown&gt;
-#9 0x63d557a29f91 &lt;unknown&gt;
-#10 0x63d557f2a9e8 &lt;unknown&gt;
-#11 0x63d557f2e84f &lt;unknown&gt;
-#12 0x63d557f11ec9 &lt;unknown&gt;
-#13 0x63d557f2f3f5 &lt;unknown&gt;
-#14 0x63d557ef774f &lt;unknown&gt;
-#15 0x63d557f53cc8 &lt;unknown&gt;
-#16 0x63d557f53ea3 &lt;unknown&gt;
-#17 0x63d557f65f83 &lt;unknown&gt;
-#18 0x7fe808894ac3 &lt;unknown&gt;
-</msg>
-<arg>name=search</arg>
-<arg>Robot Framework</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:30.527733" level="INFO">Typing text 'wrong_pass' into text field 'xpath=//android.widget.EditText[@content-desc="test-Password"]'</msg>
+<msg time="2025-11-26T09:44:31.631375" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Password"]</arg>
+<arg>wrong_pass</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-23T14:57:31.613104" elapsed="0.332863">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=141.0.7390.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
-Stacktrace:
-#0 0x63d557f66fea &lt;unknown&gt;
-#1 0x63d5579e4b4e &lt;unknown&gt;
-#2 0x63d557a2d4ae &lt;unknown&gt;
-#3 0x63d557a5ce12 &lt;unknown&gt;
-#4 0x63d557a2aae7 &lt;unknown&gt;
-#5 0x63d557a5cfde &lt;unknown&gt;
-#6 0x63d557a82b3b &lt;unknown&gt;
-#7 0x63d557a5cbe3 &lt;unknown&gt;
-#8 0x63d557a292d2 &lt;unknown&gt;
-#9 0x63d557a29f91 &lt;unknown&gt;
-#10 0x63d557f2a9e8 &lt;unknown&gt;
-#11 0x63d557f2e84f &lt;unknown&gt;
-#12 0x63d557f11ec9 &lt;unknown&gt;
-#13 0x63d557f2f3f5 &lt;unknown&gt;
-#14 0x63d557ef774f &lt;unknown&gt;
-#15 0x63d557f53cc8 &lt;unknown&gt;
-#16 0x63d557f53ea3 &lt;unknown&gt;
-#17 0x63d557f65f83 &lt;unknown&gt;
-#18 0x7fe808894ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2025-11-26T09:44:30.524087" elapsed="1.107623"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<arg>name=search</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:31.946279" elapsed="0.000076"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:31.636627" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]'.</msg>
+<msg time="2025-11-26T09:44:32.269473" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:31.632482" elapsed="0.637289"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Robot Framework</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:31.946574" elapsed="0.000057"/>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Username and password do not match</arg>
+<arg>10s</arg>
+<doc>Waits until the ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-26T09:44:32.270463" elapsed="0.725177"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>Robot Framework</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:31.946819" elapsed="0.000122"/>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-11-26T09:44:32.996659" elapsed="0.935017"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:31.947178" elapsed="0.000039"/>
-</kw>
-<status status="FAIL" start="2025-11-23T14:57:27.856008" elapsed="4.091524">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=141.0.7390.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
-Stacktrace:
-#0 0x63d557f66fea &lt;unknown&gt;
-#1 0x63d5579e4b4e &lt;unknown&gt;
-#2 0x63d557a2d4ae &lt;unknown&gt;
-#3 0x63d557a5ce12 &lt;unknown&gt;
-#4 0x63d557a2aae7 &lt;unknown&gt;
-#5 0x63d557a5cfde &lt;unknown&gt;
-#6 0x63d557a82b3b &lt;unknown&gt;
-#7 0x63d557a5cbe3 &lt;unknown&gt;
-#8 0x63d557a292d2 &lt;unknown&gt;
-#9 0x63d557a29f91 &lt;unknown&gt;
-#10 0x63d557f2a9e8 &lt;unknown&gt;
-#11 0x63d557f2e84f &lt;unknown&gt;
-#12 0x63d557f11ec9 &lt;unknown&gt;
-#13 0x63d557f2f3f5 &lt;unknown&gt;
-#14 0x63d557ef774f &lt;unknown&gt;
-#15 0x63d557f53cc8 &lt;unknown&gt;
-#16 0x63d557f53ea3 &lt;unknown&gt;
-#17 0x63d557f65f83 &lt;unknown&gt;
-#18 0x7fe808894ac3 &lt;unknown&gt;
-</status>
+<tag>negative</tag>
+<status status="PASS" start="2025-11-26T09:44:23.215328" elapsed="10.717233"/>
 </test>
-<test id="s1-t8" name="Open YouTube" line="55">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:31.948654" level="INFO">Opening browser 'Chrome' to base url 'https://www.youtube.com'.</msg>
-<arg>https://www.youtube.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:31.948386" elapsed="3.826311"/>
+<test id="s1-t3" name="Lihat Detail Barang" line="36">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-11-26T09:44:33.934892" elapsed="4.704971"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:35.897414" level="INFO">Page title is 'YouTube'.</msg>
-<arg>YouTube</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-11-23T14:57:35.775098" elapsed="0.122539"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-26T09:44:41.641707" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-26T09:44:38.640763" elapsed="3.001375"/>
 </kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:35.989827" level="INFO">Current page contains element 'name=search_query'.</msg>
-<arg>name=search_query</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-11-23T14:57:35.898163" elapsed="0.091861"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:35.990409" elapsed="0.063093"/>
-</kw>
-<status status="PASS" start="2025-11-23T14:57:31.947987" elapsed="4.105843"/>
-</test>
-<test id="s1-t9" name="Search Video on YouTube" line="61">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:36.054965" level="INFO">Opening browser 'Chrome' to base url 'https://www.youtube.com'.</msg>
-<arg>https://www.youtube.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:36.054677" elapsed="4.552744"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:40.608417" level="INFO">Typing text 'Robot Framework' into text field 'name=search_query'.</msg>
-<arg>name=search_query</arg>
-<arg>Robot Framework</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:41.646571" level="INFO">Typing text 'standard_user' into text field 'xpath=//android.widget.EditText[@content-desc="test-Username"]'</msg>
+<msg time="2025-11-26T09:44:42.607666" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Username"]</arg>
+<arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-23T14:57:40.607923" elapsed="0.391320"/>
+<status status="PASS" start="2025-11-26T09:44:41.643025" elapsed="0.964971"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:41.000609" level="INFO">Sending key(s) ('RETURN',) to name=search_query element.</msg>
-<msg time="2025-11-23T14:57:41.338273" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-11-23T14:57:41.338412" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=search_query</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:40.999750" elapsed="0.440355"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:42.612520" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//android.widget.EditText[@content-desc="test-Password"]'</msg>
+<msg time="2025-11-26T09:44:43.986616" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:42.608766" elapsed="1.378057"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Robot Framework</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-23T14:57:41.440435" elapsed="1.131365"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:43.988831" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]'.</msg>
+<msg time="2025-11-26T09:44:44.626427" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:43.987121" elapsed="0.639645"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:42.710308" level="INFO">Current page contains text 'Robot Framework'.</msg>
-<arg>Robot Framework</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-11-23T14:57:42.572143" elapsed="0.138300"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-26T09:44:46.629114" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-26T09:44:44.627566" elapsed="2.001994"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:42.710750" elapsed="0.071975"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:46.634533" level="INFO">Clicking element 'xpath=(//android.view.ViewGroup[@content-desc="test-Item"])[1]/android.view.ViewGroup/android.widget.ImageView'.</msg>
+<msg time="2025-11-26T09:44:46.857410" level="INFO">xpath criteria: (//android.view.ViewGroup[@content-desc="test-Item"])[1]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=(//android.view.ViewGroup[@content-desc="test-Item"])[1]/android.view.ViewGroup/android.widget.ImageView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:46.630370" elapsed="0.227343"/>
 </kw>
-<status status="PASS" start="2025-11-23T14:57:36.054139" elapsed="6.728846"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:47.971526" level="INFO">xpath criteria: //android.widget.TextView[@text="BACK TO PRODUCTS"]
+xpath criteria: //android.widget.TextView[@text="BACK TO PRODUCTS"]</msg>
+<arg>xpath=//android.widget.TextView[@text="BACK TO PRODUCTS"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-26T09:44:46.858506" elapsed="1.113361"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:47.977903" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="BACK TO PRODUCTS"]'.</msg>
+<msg time="2025-11-26T09:44:48.143623" level="INFO">xpath criteria: //android.widget.TextView[@text="BACK TO PRODUCTS"]</msg>
+<arg>xpath=//android.widget.TextView[@text="BACK TO PRODUCTS"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:47.972670" elapsed="0.171082"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-11-26T09:44:48.144068" elapsed="0.560991"/>
+</kw>
+<tag>positive</tag>
+<status status="PASS" start="2025-11-26T09:44:33.933524" elapsed="14.772374"/>
 </test>
-<test id="s1-t10" name="Open Github and Check Title" line="69">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:42.784126" level="INFO">Opening browser 'Chrome' to base url 'https://github.com'.</msg>
-<arg>https://github.com</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:42.783807" elapsed="2.211931"/>
+<test id="s1-t4" name="Add To Cart" line="49">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-11-26T09:44:48.708340" elapsed="4.708055"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:45.187944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-23T14:57:45.188135" level="FAIL">Title should have been 'GitHub: Let’s build from here · GitHub' but was 'GitHub · Change is constant. GitHub keeps you ahead. · GitHub'.</msg>
-<arg>GitHub: Let’s build from here · GitHub</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2025-11-23T14:57:44.996144" elapsed="0.192171">Title should have been 'GitHub: Let’s build from here · GitHub' but was 'GitHub · Change is constant. GitHub keeps you ahead. · GitHub'.</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-26T09:44:56.417057" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-26T09:44:53.416676" elapsed="3.000773"/>
 </kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<arg>name=q</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:45.188665" elapsed="0.000092"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:56.421183" level="INFO">Typing text 'standard_user' into text field 'xpath=//android.widget.EditText[@content-desc="test-Username"]'</msg>
+<msg time="2025-11-26T09:44:57.375998" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Username"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:56.418213" elapsed="0.957904"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-11-23T14:57:45.189099" elapsed="0.000078"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:57.377898" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//android.widget.EditText[@content-desc="test-Password"]'</msg>
+<msg time="2025-11-26T09:44:58.489550" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>xpath=//android.widget.EditText[@content-desc="test-Password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:57.376387" elapsed="1.113455"/>
 </kw>
-<status status="FAIL" start="2025-11-23T14:57:42.783334" elapsed="2.406162">Title should have been 'GitHub: Let’s build from here · GitHub' but was 'GitHub · Change is constant. GitHub keeps you ahead. · GitHub'.</status>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:44:58.495375" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]'.</msg>
+<msg time="2025-11-26T09:44:59.127092" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-LOGIN"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:44:58.490584" elapsed="0.636848"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-26T09:45:01.129024" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-26T09:44:59.128073" elapsed="2.001362"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:45:01.134861" level="INFO">Clicking element 'xpath=(//android.widget.TextView[@text="ADD TO CART"])[1]'.</msg>
+<msg time="2025-11-26T09:45:01.395645" level="INFO">xpath criteria: (//android.widget.TextView[@text="ADD TO CART"])[1]</msg>
+<arg>xpath=(//android.widget.TextView[@text="ADD TO CART"])[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:45:01.130407" elapsed="0.265709"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-26T09:45:01.406102" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="test-Cart"]/android.view.ViewGroup/android.widget.ImageView'.</msg>
+<msg time="2025-11-26T09:45:02.210581" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-Cart"]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="test-Cart"]/android.view.ViewGroup/android.widget.ImageView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-26T09:45:01.397231" elapsed="0.813700"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-11-26T09:45:02.211748" elapsed="0.647742"/>
+</kw>
+<tag>positive</tag>
+<status status="PASS" start="2025-11-26T09:44:48.706957" elapsed="14.152914"/>
 </test>
-<test id="s1-t11" name="Open Wikipedia" line="75">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:45.190671" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.org'.</msg>
-<arg>https://www.wikipedia.org</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-23T14:57:45.190338" elapsed="1.655445"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:46.850968" level="INFO">Page title is 'Wikipedia'.</msg>
-<arg>Wikipedia</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-11-23T14:57:46.846083" elapsed="0.005053"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-11-23T14:57:46.865744" level="INFO">Current page contains element 'name=search'.</msg>
-<arg>name=search</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-11-23T14:57:46.851612" elapsed="0.014268"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-23T14:57:46.866231" elapsed="0.060262"/>
-</kw>
-<status status="PASS" start="2025-11-23T14:57:45.189907" elapsed="1.736920"/>
-</test>
-<status status="FAIL" start="2025-11-23T14:56:54.311881" elapsed="52.615709"/>
+<status status="PASS" start="2025-11-26T09:44:07.181732" elapsed="55.678852"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="7" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">negative</stat>
+<stat pass="3" fail="0" skip="0">positive</stat>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="4" fail="7" skip="0">Test</stat>
+<stat name="Login Logout" id="s1" pass="4" fail="0" skip="0">Login Logout</stat>
 </suite>
 </statistics>
 <errors>
